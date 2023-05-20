@@ -1,0 +1,94 @@
+body{
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+    background: url('https://www.aggreko.com/-/media/Aggreko/Images/Aggreko-Perspectives/Mining-Perspective-main-image.jpg?la=ja-JP&amp;w=1500&amp;hash=14C2C569990929031E837F5E6483E020BE4ED08C');
+    background-size: cover;
+    overflow-y: hidden;
+}
+body::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    min-height: 30px;
+}
+
+.logo-img{
+    width: 120px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: -1px;
+    
+}
+
+li{
+    display: inline-flex;
+    font-size: 20px;
+    transition: 500ms;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    
+
+}
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+li:hover{
+    display: inline-flex;
+    font-size: 20px;
+    border-bottom: solid 2px;
+    border-color: gold;
+    transition: 500ms;
+    margin-left: 60px;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(204, 204, 204, 0.534);
+    top:0 ;
+    left: 0;
+    color: rgb(58, 57, 57);  
+    height: 50px;
+    width: 1000px;
+    
+}
+
+.frame-polus{
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    left: 70vh;
+    top: 100px;
+}
+
+.contact-polus{
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    left: 5vh;
+    top: 200px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}

@@ -1,0 +1,214 @@
+body{
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    min-height: 30px;
+}
+
+.logo-img{
+    width: 120px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: -1px;
+    
+}
+
+li{
+    display: inline-flex;
+    font-size: 20px;
+    transition: 500ms;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    
+
+}
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+li:hover{
+    display: inline-flex;
+    font-size: 20px;
+    border-bottom: solid 2px;
+    border-color: gold;
+    transition: 500ms;
+    margin-left: 60px;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.534);
+    top:0 ;
+    left: 0;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    width: 1000px;
+    
+}
+
+.section-name {
+    top: 0;
+    left: 0;
+    background: url('https://www.aggreko.com/-/media/Aggreko/Images/Aggreko-Perspectives/Mining-Perspective-main-image.jpg?la=ja-JP&amp;w=1500&amp;hash=14C2C569990929031E837F5E6483E020BE4ED08C') 25%;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+
+
+}
+
+.section-name::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-name-title{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 200px;
+    color: white;
+    font-size: 50px;
+}
+
+.section-name-subtitle{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 350px;
+    color: white;
+    font-size: 30px;
+}
+
+
+.section-nap {
+    top: 0;
+    left: 0;
+    background: url('https://s1.1zoom.ru/b5050/166/369531-svetik_2560x1440.jpg');
+    position: absolute;
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    background-size: cover;
+    margin-top: 938px;
+
+
+}
+
+.section-nap::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.section-nap-title{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 100px;
+    color: white;
+    font-size: 50px;
+}
+.section-nap-subtitle{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 270px;
+    color: white;
+    font-size: 30px;
+}
+
+.section-nap-text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 290px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.section-history {
+    top: 0;
+    left: 0;
+    background: url('https://images.wallpaperscraft.ru/image/single/gory_vershina_sklon_175846_2560x1600.jpg');
+    position: absolute;
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    background-size: cover;
+    margin-top: 1950px;
+}
+
+.section-history::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.section-history-title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    margin-top: 100px;
+    color: white;
+    font-size: 50px;
+}
+
+.section-history-text{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 290px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px #558ABB;
+}

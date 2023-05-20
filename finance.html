@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные финансовые показатели</title>
+    <link rel="stylesheet" href="finance.css">
+    <script>
+        // Код для рассчета минимальной, максимальной цены и среднеквадратического отклонения
+        function calculateStatistics(prices) {
+          let minPrice = Math.min(...prices);
+          let maxPrice = Math.max(...prices);
+          let sum = prices.reduce((acc, price) => acc + price, 0);
+          let mean = sum / prices.length;
+          let squaredDifferences = prices.map(price => Math.pow(price - mean, 2));
+          let variance = squaredDifferences.reduce((acc, squaredDiff) => acc + squaredDiff, 0) / prices.length;
+          let standardDeviation = Math.sqrt(variance);
+      
+          return {
+            minPrice: minPrice,
+            maxPrice: maxPrice,
+            standardDeviation: standardDeviation
+          };
+        }
+      
+        // Пример данных за апрель 2023 для компании "Полюс"
+        let aprilPrices = [10453, 10600, 10563, 10525, 10520, 10390, 10432.5, 10268, 10378.5, 10363.5, 9785, 9850, 9639, 9658.5, 9640, 9605, 9636, 9719, 9660, 9621];
+      
+        // Даты торгов
+        let tradeDates = [
+          '28.04.2023',
+          '27.04.2023',
+          '26.04.2023',
+          '25.04.2023',
+          '24.04.2023',
+          '21.04.2023',
+          '20.04.2023',
+          '19.04.2023',
+          '18.04.2023',
+          '17.04.2023',
+          '14.04.2023',
+          '13.04.2023',
+          '12.04.2023',
+          '11.04.2023',
+          '10.04.2023',
+          '07.04.2023',
+          '06.04.2023',
+          '05.04.2023',
+          '04.04.2023',
+          '03.04.2023'
+        ];
+      
+        // Рассчет статистики цен
+        let statistics = calculateStatistics(aprilPrices);
+      
+        // Рассчет капитализации
+        let totalCapital = 136069400.11; // Всего акционерный капитал
+      
+        // Вывод результатов на страницу
+        window.onload = function() {
+          document.getElementById('capitalization').textContent = totalCapital.toFixed(2);
+          document.getElementById('minPrice').textContent = statistics.minPrice;
+          document.getElementById('maxPrice').textContent = statistics.maxPrice;
+          document.getElementById('standardDeviation').textContent = statistics.standardDeviation.toFixed(2);
+      
+          let tableBody = document.getElementById('priceTableBody');
+          for (let i = 0; i < aprilPrices.length; i++) {
+            let row = document.createElement('tr');
+            let dateCell = document.createElement('td');
+            let priceCell = document.createElement('td');
+            dateCell.textContent = tradeDates[i];
+            priceCell.textContent = aprilPrices[i];
+            row.appendChild(dateCell);
+            row.appendChild(priceCell);
+            tableBody.appendChild(row);
+          }
+        };
+      </script> 
+      
+</head>
+<body>
+    <header>
+        <section class="header-logo">
+            <div></div>
+            <ul>
+                <li><img class="logo-img" src="logo_dark_ru.svg" alt="logo_dark_ru"></li>
+                <li><a href="main.html">О компании</a></li>
+                <li><a href="finance.html">Основные финансовые показатели</a></li>
+                <li><a href="contact.html">Контактные данные</a></li>
+                <li><a href="video.html">Видео</a></li>
+            </ul>
+        </section>
+    </header>
+    
+    <main>
+        <section class="section-glav">
+            <div class="section-center">
+                <h1>Основные финансовые показатели для компании "Полюс"</h1>
+            </div>
+            <table class="section-table">
+                <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Цена закрытия</th>
+                </tr>
+                </thead>
+                <tbody id="priceTableBody"></tbody>
+            </table>
+            <div class="section-text">
+                <p>Минимальная цена: <span id="minPrice">...</span></p>
+                <p>Максимальная цена: <span id="maxPrice">...</span></p>
+                <p>Среднеквадратическое отклонение цены: <span id="standardDeviation">...</span></p>
+                <p>Капитализация: <span id="capitalization">...</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Конец
+    </footer>
+</body>
+</html>
