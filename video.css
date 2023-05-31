@@ -62,16 +62,16 @@ li:hover{
     margin-left: 60px;
 }
 
-header{
+.header{
     position: fixed;
     z-index: 1;
-    background-color: rgba(204, 204, 204, 0.534);
+    background-color: rgba(250, 247, 247, 0.979);
     top:0 ;
     left: 0;
-    color: rgb(58, 57, 57);  
+    color: rgb(0, 0, 0);
     height: 50px;
-    width: 1000px;
-    
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 
 .video{

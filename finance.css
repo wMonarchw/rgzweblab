@@ -62,26 +62,18 @@ li:hover{
     margin-left: 60px;
 }
 
-header{
+.header{
     position: fixed;
     z-index: 1;
-    background-color: rgba(204, 204, 204, 0.534);
+    background-color: rgba(250, 247, 247, 0.979);
     top:0 ;
     left: 0;
-    color: rgb(58, 57, 57);  
+    color: rgb(0, 0, 0);
     height: 50px;
-    width: 1000px;
-    
-}
-table {
     width: 100%;
-    height: 100%;
-    text-align: center;
-    position: absolute;
-    margin-top: 200px;
-    color: white;
-    font-size: 20px;
+    transition: transform 0.3s ease;
 }
+
 .section-glav{
     width: 100%;
     min-height: 100%;
@@ -104,10 +96,11 @@ table {
     border-collapse: collapse;
     width: 600px;
     position: absolute;
-    top: -5vh;
+    top: 15vh;
     font-size: 18px;
     height: 500px;
-    right: 70vh;
+    right: 80vh;
+
 
   }
 
@@ -130,6 +123,31 @@ table {
     font-size: 20px;
     right: 48vh;
     top: 135px;
-
-    
+    display: none;
 }
+
+button{
+    width: 152px;
+    border-radius: 10px;
+    height: 60px;
+    position: relative;
+    font-size: 20px;
+    color: rgb(39, 39, 38);
+    background-color: #ffcb08;
+    transition: 1s ease;
+    top: 450px;
+    left: 390px;
+}
+
+button:hover{
+    width: 200px;
+    height: 80px;
+    color: white;
+    transition: 0.5s ease;
+ }
+ div p{
+    border: 1px solid;
+    border-color: rgb(230, 142, 11);
+    color: rgb(247, 247, 247);
+    border-radius: 10px;
+ }

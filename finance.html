@@ -76,11 +76,12 @@
             tableBody.appendChild(row);
           }
         };
+
       </script> 
       
 </head>
 <body>
-    <header>
+    <div class="header">
         <section class="header-logo">
             <div></div>
             <ul>
@@ -91,7 +92,7 @@
                 <li><a href="video.html">Видео</a></li>
             </ul>
         </section>
-    </header>
+    </div>
     
     <main>
         <section class="section-glav">
@@ -107,7 +108,8 @@
                 </thead>
                 <tbody id="priceTableBody"></tbody>
             </table>
-            <div class="section-text">
+            <div><button onclick='showPrices()'>Показать цены</button></div>
+            <div id='section-prices' class="section-text">
                 <p>Минимальная цена: <span id="minPrice">...</span></p>
                 <p>Максимальная цена: <span id="maxPrice">...</span></p>
                 <p>Среднеквадратическое отклонение цены: <span id="standardDeviation">...</span></p>
@@ -118,5 +120,21 @@
     <footer>
         Конец
     </footer>
+
+    <script>
+        let text = document.getElementById('section-prices');
+        let moved = false;
+        function showPrices(){
+            console.log(text);
+            if (moved == false){
+                text.style.display = 'block';
+                moved = true;
+            }
+            else{
+                text.style.display = 'none';
+                moved = false;
+            }
+        }
+    </script>
 </body>
 </html>
