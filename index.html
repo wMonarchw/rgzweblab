@@ -7,34 +7,11 @@
     <title>О компании</title>
     <link rel="stylesheet" href="main.css">
     <script>
-        // Ожидаем загрузку контента страницы
-        document.addEventListener("DOMContentLoaded", function() {
-            var header = document.querySelector(".header");
-            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-            // Функция для проверки положения прокрутки и скрытия/показа хедера
-            function checkScrollPosition() {
-                var currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (currentScrollPosition > scrollPosition) {
-                    header.style.transform = "translateY(-100%)";
-                } else {
-                    header.style.transform = "translateY(0)";
-                }
-
-                scrollPosition = currentScrollPosition;
-            }
-
-            // Обработчик события прокрутки
-            window.addEventListener("scroll", checkScrollPosition);
-        });
-
         function fisrtClick(){
             alert('Здесь ничего нет')
         }
     </script>
 </head>
-
 <body>
     <div class="header">
         <section class="header-logo">
